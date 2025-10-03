@@ -9,18 +9,19 @@
   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Playfair+Display&display=swap" rel="stylesheet" />
 
   <style>
- body {
-  margin: 0;
-  font-family: 'Playfair Display', serif;
-  background: linear-gradient(to right, #ffecd2, #fcb69f);
-  min-height: 100vh;
-  overflow-y: auto;
-  position: relative;
-  padding: 40px 20px;
-  box-sizing: border-box;
-  cursor: default;
-}
+    html, body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Playfair Display', serif;
+      background: linear-gradient(to right, #ffecd2, #fcb69f);
+      min-height: 100vh;
+      overflow-x: hidden;
+      box-sizing: border-box;
+    }
 
+    body {
+      padding: 40px 20px;
+    }
 
     .card {
       background: white;
@@ -28,7 +29,7 @@
       border-radius: 15px;
       box-shadow: 0 4px 20px rgba(0,0,0,0.1);
       max-width: 420px;
-      width: 100%;
+      margin: 0 auto;
       text-align: center;
       animation: fadeIn 1.2s ease-in-out;
       z-index: 1;
@@ -65,7 +66,6 @@
       to { opacity: 1; transform: translateY(0); }
     }
 
-    /* Floating hearts */
     .heart {
       position: absolute;
       animation: float 6s linear infinite;
@@ -104,12 +104,10 @@
       heart.style.top = Math.random() * 100 + "vh";
 
       heart.style.animationDuration = (5 + Math.random() * 5) + "s";
-
       heart.style.fontSize = (36 + Math.random() * 20) + "px";
 
       const color = heartColors[Math.floor(Math.random() * heartColors.length)];
       heart.style.color = color;
-
       heart.style.filter = `drop-shadow(0 0 8px ${color})`;
       heart.style.textShadow = `0 0 10px ${color}`;
 
