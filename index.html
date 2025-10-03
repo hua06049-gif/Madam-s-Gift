@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Happy Birthday Hadia 💖</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Playfair+Display&display=swap" rel="stylesheet" />
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Playfair Display', serif;
+      background: linear-gradient(to right, #ffecd2, #fcb69f);
+      min-height: 100vh;
+      overflow: hidden;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      cursor: default;
+    }
+
+    .card {
+      background: white;
+      padding: 30px 25px;
+      border-radius: 15px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      max-width: 420px;
+      width: 100%;
+      text-align: center;
+      animation: fadeIn 1.2s ease-in-out;
+      z-index: 1;
+    }
+
+    h1 {
+      font-family: 'Dancing Script', cursive;
+      color: #ff4e70;
+      font-size: 3em;
+      margin-bottom: 10px;
+      letter-spacing: 1px;
+    }
+
+    p {
+      font-size: 1.2em;
+      color: #333;
+      line-height: 1.7;
+      margin: 12px 0;
+    }
+
+    .emoji {
+      font-size: 2.8em;
+      margin-bottom: 15px;
+    }
+
+    .footer {
+      margin-top: 25px;
+      font-style: italic;
+      color: #666;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Floating hearts */
+    .heart {
+      position: absolute;
+      animation: float 6s linear infinite;
+      opacity: 0.7;
+      user-select: none;
+      will-change: transform, opacity;
+      filter: drop-shadow(0 0 8px);
+      text-shadow: 0 0 8px;
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(0) scale(1);
+        opacity: 0.9;
+      }
+      100% {
+        transform: translateY(-100vh) scale(2);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Floating hearts -->
+  <script>
+    const heartColors = ['#ff6b81', '#ff4e70', '#ff8fab', '#ffcad4', '#f7a1a1', '#e75480', '#ffb6c1', '#db7093', '#c71585'];
+    const numberOfHearts = 30;
+
+    for (let i = 0; i < numberOfHearts; i++) {
+      const heart = document.createElement("div");
+      heart.className = "heart";
+      heart.innerText = "❤️";
+
+      heart.style.left = Math.random() * 100 + "vw";
+      heart.style.top = Math.random() * 100 + "vh";
+
+      heart.style.animationDuration = (5 + Math.random() * 5) + "s";
+
+      heart.style.fontSize = (36 + Math.random() * 20) + "px";
+
+      const color = heartColors[Math.floor(Math.random() * heartColors.length)];
+      heart.style.color = color;
+
+      heart.style.filter = `drop-shadow(0 0 8px ${color})`;
+      heart.style.textShadow = `0 0 10px ${color}`;
+
+      document.body.appendChild(heart);
+    }
+  </script>
+
+  <!-- Card content -->
+  <div class="card">
+    <div class="emoji">🎂🎉🎈</div>
+    <h1>Happy Birthday, Hadia 💖</h1>
+    <p>
+      To the love of my life — <strong>you</strong> make every single day brighter, warmer, and more meaningful just by being in it.
+    </p>
+    <p>
+      On your special day, I just want to say how incredibly lucky and grateful I am to have you. Your smile lights up my world, your heart inspires me, and your presence makes everything feel right.
+    </p>
+    <p>
+      Here's to more memories, more laughter, and more adventures with you. You deserve all the happiness this world can offer.
+    </p>
+    <p>I love u soooo much 💖</p>
+    <div class="footer">
+      With all my love, always 💕
+    </div>
+  </div>
+
+</body>
+</html>
